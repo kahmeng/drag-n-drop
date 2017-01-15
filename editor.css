@@ -1,0 +1,28 @@
+#canvas {
+	width: 800px;
+	height: 400px;
+	border: 1px #444 solid;
+	position: relative;
+}
+
+#main_canvas {
+	display: inline-block;
+}
+
+#tool_box {
+	width: 200px;
+	height: 400px;
+	display: inline-block;
+	border: 1px #444 solid;
+	position: relative;
+}
+
+#rec {
+	position: absolute;
+	top: 2%;
+	left: 8%;
+}
+
+.canvas_obj {
+	position: absolute;
+}
