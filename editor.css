@@ -89,6 +89,8 @@
 }
 
 .canvas_obj_txt {
+    outline: none;
+    border: none;
     resize: none;
     overflow: hidden;
 }

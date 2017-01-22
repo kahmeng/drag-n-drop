@@ -1,22 +1,24 @@
 const createObj = ( cv, id ) => {
     if ( id == "rec" ) {
-        return makeShape;
+        return makeShape( cv );
     } else if ( id == "txt" ) {
         return makeTxtBox( cv );
     }
 }
 
-const makeShape = ( e ) => {
-    let shape = document.createElement( 'div' );
-    shape.id = "obj_" + ( ALL_OBJ.length + 1 );
-    shape.className = 'canvas_obj canvas_obj_shape';
-    shape.style.width = '80px';
-    shape.style.height = '80px';
-    shape.style.top = '80px';
-    shape.style.left = '80px';
-    shape.style.backgroundColor = '#654321';
-    cv.appendChild( shape );
-    ALL_OBJ.push( shape );
+const makeShape = ( cv ) => {
+    return ( e ) => {
+        let shape = document.createElement( 'div' );
+        shape.id = "obj_" + ( ALL_OBJ.length + 1 );
+        shape.className = 'canvas_obj canvas_obj_shape';
+        shape.style.width = '80px';
+        shape.style.height = '80px';
+        shape.style.top = '80px';
+        shape.style.left = '80px';
+        shape.style.backgroundColor = '#000000';
+        cv.appendChild( shape );
+        ALL_OBJ.push( shape );
+    }
 }
 
 const makeTxtBox = ( cv ) => {
@@ -38,7 +40,7 @@ const makeTxtBox = ( cv ) => {
 
 const onFocus = ( cv ) => {
     return ( e ) => {
-        let txt_box = e.currentTarget
+        let txt_box = e.currentTarget;
         txt_box.focus();
         cv.removeEventListener( 'mousedown', onMouseDownObj );
     }
@@ -48,6 +50,9 @@ const onBlur = ( cv, obj ) => {
     return ( func ) => {
         return ( e ) => {
             cv.addEventListener( 'mousedown', onMouseDownObj );
+            console.log(obj)
+            obj.style.height = obj.scrollHeight + 'px';
+            console.log(obj.scrollHeight)
             obj.removeEventListener( 'blur', func );
         }
     }
