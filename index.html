@@ -5,28 +5,37 @@
 	<link rel="stylesheet" type="text/css" href="editor.css">
 </head>
 <body>
-	<div class="row">
-		<div class="tool_bar">
-			<div id="color">
-				<button class="tool_icon" id="color_btn">Color</button>
-				<div id="color_board">
-					<div id="color_display"></div>
-					<input id="hex_input" type="text" name="hex" placeholder="#HexCode" maxlength="7">
-					<div id="all_color"></div>
+	<div id="body">
+		<div class="row">
+			<div class="tool_bar">
+				<div id="color">
+					<button class="tool_icon" id="color_btn">Color</button>
+					<div id="color_board">
+						<div id="color_display"></div>
+						<input id="hex_input" type="text" name="hex" placeholder="#HexCode" maxlength="7">
+						<div id="all_color"></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div id="tool_box">
-			<div class="tool" id="shape_tool">
-				<button class="tool_btn" id="rec">Rectangle</button>
-				<button class="tool_btn" id="txt">Text Box</button>
+		<div class="row">
+			<div id="tool_box">
+				<div class="tool" id="shape_tool">
+					<button class="tool_btn" id="rec">Rectangle</button>
+					<button class="tool_btn" id="txt">Text Box</button>
+				</div>
 			</div>
-		</div>
-		<div id="main_canvas">
-			<div id="canvas">
-				
+			<div id="main_canvas">
+				<div id="canvas">
+					<div class="handle handle_remove" id="handle_nw"></div>
+					<div class="handle handle_remove" id="handle_n"></div>
+					<div class="handle handle_remove" id="handle_ne"></div>
+					<div class="handle handle_remove" id="handle_e"></div>
+					<div class="handle handle_remove" id="handle_se"></div>
+					<div class="handle handle_remove" id="handle_s"></div>
+					<div class="handle handle_remove" id="handle_sw"></div>
+					<div class="handle handle_remove" id="handle_w"></div>
+				</div>
 			</div>
 		</div>
 	</div>
