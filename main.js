@@ -32,6 +32,7 @@ const makeTxtBox = ( mouseDown, cv ) => {
         txt.style.left = '80px';
         txt.style.width = '300px';
         txt.style.height = '80px';
+        txt.style.fontSize = '20px';
         let blur = onBlur( cv, txt );
         txt.setAttribute( 'placeholder', 'double click to edit me' );
         txt.addEventListener( 'dblclick', onFocus( cv, mouseDown ) );
@@ -135,95 +136,95 @@ const onMouseMoveHandle = ( obj_ori_size, obj_ori_pos, obj_sty, mouse_pos, direc
         let pos_end = [obj_ori_size[0] + obj_ori_pos[0], obj_ori_size[1] + obj_ori_pos[1]];
         switch ( direction ) {
             case 'nw':
-                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 10 ) {
+                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 1 ) {
                     obj_sty.style.width = obj_ori_size[0] - displace[0] + 'px';
                     obj_sty.style.left = obj_ori_pos[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
-                    obj_sty.style.left = pos_end[0] - 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
+                    obj_sty.style.left = pos_end[0] - 1 + 'px';
                 }
-                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 10 ) {
+                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 1 ) {
                     obj_sty.style.height = obj_ori_size[1] - displace[1] + 'px';
                     obj_sty.style.top = obj_ori_pos[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
-                    obj_sty.style.top = pos_end[1] - 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
+                    obj_sty.style.top = pos_end[1] - 1 + 'px';
                 }
                 break;
             case 'n':
-                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 10 ) {
+                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 1 ) {
                     obj_sty.style.height = obj_ori_size[1] - displace[1] + 'px';
                     obj_sty.style.top = obj_ori_pos[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
-                    obj_sty.style.top = pos_end[1] - 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
+                    obj_sty.style.top = pos_end[1] - 1 + 'px';
                 }
                 break;
             case 'ne':
-        console.log( curr_mouse_pos[0] , pos_mouse_end_left[0] + 10 )
+        console.log( curr_mouse_pos[0] , pos_mouse_end_left[0] + 1 )
 
-                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 10 ) {
+                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 1 ) {
                     obj_sty.style.width = obj_ori_size[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
                 }
-                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 10 ) {
+                if ( curr_mouse_pos[1] < pos_mouse_end_right[1] - 1 ) {
                     obj_sty.style.height = obj_ori_size[1] - displace[1] + 'px';
                     obj_sty.style.top = obj_ori_pos[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
-                    obj_sty.style.top = pos_end[1] - 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
+                    obj_sty.style.top = pos_end[1] - 1 + 'px';
                 }
                 break;
             case 'e':
-                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 10 ) {
+                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 1 ) {
                     obj_sty.style.width = obj_ori_size[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
                 }
                 break;
             case 'se':
-                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 10 ) {
+                if ( curr_mouse_pos[0] > pos_mouse_end_left[0] + 1 ) {
                     obj_sty.style.width = obj_ori_size[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
                 }
-                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 10 ) {
+                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 1 ) {
                     obj_sty.style.height = obj_ori_size[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
                 }
                 break;
             case 's':
-                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 10 ) {
+                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 1 ) {
                     obj_sty.style.height = obj_ori_size[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
                 }
                 break;
 
 
             case 'sw':
-                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 10 ) {
+                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 1 ) {
                     obj_sty.style.width = obj_ori_size[0] - displace[0] + 'px';
                     obj_sty.style.left = obj_ori_pos[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
-                    obj_sty.style.left = pos_end[0] - 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
+                    obj_sty.style.left = pos_end[0] - 1 + 'px';
                 }
-                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 10 ) {
+                if ( curr_mouse_pos[1] > pos_mouse_end_left[1] + 1 ) {
                     obj_sty.style.height = obj_ori_size[1] + displace[1] + 'px';
                 } else {
-                    obj_sty.style.height = 10 + 'px';
+                    obj_sty.style.height = 1 + 'px';
                 }
                 break;
             case 'w':
-                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 10 ) {
+                if ( curr_mouse_pos[0] < pos_mouse_end_right[0] - 1 ) {
                     obj_sty.style.width = obj_ori_size[0] - displace[0] + 'px';
                     obj_sty.style.left = obj_ori_pos[0] + displace[0] + 'px';
                 } else {
-                    obj_sty.style.width = 10 + 'px';
-                    obj_sty.style.left = pos_end[0] - 10 + 'px';
+                    obj_sty.style.width = 1 + 'px';
+                    obj_sty.style.left = pos_end[0] - 1 + 'px';
                 }
                 break;
         }
