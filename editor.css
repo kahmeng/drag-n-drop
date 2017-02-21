@@ -15,20 +15,28 @@
     width: 100%;
 }
 
-#color {
+.tool_bar_btn {
+    display: inline;
     position: relative;
+}
+
+.toggle_icon {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    z-index: 99999999999;
+    display: none;
+}
+
+.toggle_range_icon {
+    width: 130px;
 }
 
 #color_board {
     background-color: #ccc;
     min-height: 1px;
     width: 155px;
-    height: 212px;
-    position: relative;
-    left: 20px;
-    top: 20px;
-    z-index: 1;
-    display: none;
+    height: 245px;
 }
 
 #all_color {
@@ -36,9 +44,13 @@
     height: 155px;
     position: absolute;
     left: 5px;
-    bottom: 5px;
+    bottom: 40px;
     z-index: 1;
     background-color: #000;
+}
+
+#layer_display {
+    width: 100px;
 }
 
 #color_display {
@@ -60,6 +72,50 @@
     padding: 5px;
 }
 
+.color_border {
+    position: relative;
+    right: 0;
+    top: 190px;
+}
+
+.color_border input {
+    position: absolute;
+    margin: 0;
+}
+
+.color_border label {
+    position: absolute;
+    right: 65px;
+    bottom: 3px;
+    font-size: 12px;
+}
+
+#color_border_a {
+    right: 50px;
+    bottom: 3px;
+}
+
+#color_border_t {
+    right: 17px;
+    bottom: 14px;
+}
+
+#color_border_r {
+    right: 6px;
+    bottom: 3px;
+}
+
+#color_border_b {
+    right: 17px;
+    bottom: -8px;
+}
+
+#color_border_l {
+    right: 28px;
+    bottom: 3px;
+}
+
+
 .color_pix {
     float: left;
     margin: 1px 0 0 1px;
@@ -73,6 +129,31 @@
     border: #000 solid 1px;
 }
 
+.color_bwt {
+    float: left;
+    width: 10px;
+    border: #000 solid 1px;
+    border-right: none;
+    height: 10px;
+    box-sizing: content-box;
+    margin: 13px 0 0 0;
+}
+
+.color_bwt:last-child {
+    border-right: #000 solid 1px;
+    position: relative;
+    background-color: #ccc !important;
+}
+
+.color_bwt:last-child::after{
+    content: 'T';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -3px;
+    font-size: 10px;
+}
+
 #tool_box {
     display: inline-block;
     border: 1px #444 solid;
@@ -84,15 +165,61 @@
     height: 400px;
 }
 
+.label {
+    position: absolute;
+    top: 2px;
+    border: none;
+    width: 35px;
+    right: 100%;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.range_icon {
+    position: absolute;
+    margin: 0;
+}
+
+.range_value_icon {
+    position: absolute;
+    top: 2px;
+    border: none;
+    width: 35px;
+    left: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.label_y, #border_radius_range_y, #border_radius_value_y {
+    top: 22px;
+}
+
+.label_t, #border_range_t, #border_value_t {
+    top: 22px;
+}
+
+.label_r, #border_range_r, #border_value_r {
+    top: 42px;
+}
+
+.label_b, #border_range_b, #border_value_b {
+    top: 62px;
+}
+
+.label_l, #border_range_l, #border_value_l {
+    top: 82px;
+}
+
 /*------- cv -------*/
 /*---- cv ----*/
 .canvas_obj {
+    border: solid 0px #000; 
     position: absolute;
+    box-sizing: border-box;
 }
 
 .canvas_obj_txt {
     outline: none;
-    border: none;
     resize: none;
     background-color: transparent;
     overflow: hidden;
@@ -104,10 +231,6 @@
     border: 1px #444 solid;
     position: relative;
     overflow: hidden;
-}
-
-#main_canvas {
-    display: inline-block;
 }
 
 /*---- handle ----*/

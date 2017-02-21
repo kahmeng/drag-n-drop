@@ -8,34 +8,99 @@
 	<div id="body">
 		<div class="row">
 			<div class="tool_bar">
-				<div id="color">
+				<div class="tool_bar_btn" id="color">
 					<button class="tool_icon" id="color_btn">Color</button>
-					<div id="color_board">
+					<div class="toggle_icon" id="color_board">
 						<div id="color_display"></div>
 						<input id="hex_input" type="text" name="hex" placeholder="#HexCode" maxlength="7">
 						<div id="all_color"></div>
+						<div class="color_border" id="color_border">
+							<input id="color_border_a" type="checkbox" name="all"><label>Border:</label>
+							<input id="color_border_t" type="checkbox" name="top">
+							<input id="color_border_r" type="checkbox" name="right">
+							<input id="color_border_b" type="checkbox" name="bottom">
+							<input id="color_border_l" type="checkbox" name="left">
+						</div>
 					</div>
 				</div>
+				<div class="tool_bar_btn" id="opacity">
+					<button class="tool_icon" id="opacity_btn">Opacity</button>
+					<div class="toggle_icon toggle_range_icon" id="opacity_display">
+						<input class="range_icon" type="range" id="opacity_range" name="opacity" min="0" max="100" value="100">
+						<input class="range_value_icon opacity_value" id="opacity_value" value="100">
+					</div>
+				</div>
+				<div class="tool_bar_btn" id="border_radius">
+					<button class="tool_icon" id="border_radius_btn">Border Radius</button>
+					<div class="toggle_icon toggle_range_icon" id="border_radius_display">
+						<label class="label label_x">X</label>
+						<input class="range_icon" type="range" id="border_radius_range_x" name="border_radius" min="0" max="50" value="0">
+						<input class="range_value_icon border_radius_value" id="border_radius_value_x" value="0">
+						<label class="label label_y">Y</label>
+						<input class="range_icon" type="range" id="border_radius_range_y" name="border_radius" min="0" max="50" value="0">
+						<input class="range_value_icon border_radius_value" id="border_radius_value_y" value="0">
+					</div>
+				</div>
+
+				<div class="tool_bar_btn" id="border">
+					<button class="tool_icon" id="border_btn">Border</button>
+					<div class="toggle_icon toggle_range_icon" id="border_display">
+
+						<!-- <button id="tringle">Tringle</button> -->
+
+						<label class="label label_all">All</label>
+						<input class="range_icon" type="range" id="border_range_all" name="border" min="0" max="50" value="0">
+						<input class="range_value_icon border_value" id="border_value_all" value="0">
+
+						<label class="label label_t">Top</label>
+						<input class="range_icon" type="range" id="border_range_t" name="border" min="0" max="100" value="0">
+						<input class="range_value_icon border_value" id="border_value_t" value="0">
+
+						<label class="label label_r">Right</label>
+						<input class="range_icon" type="range" id="border_range_r" name="border" min="0" max="100" value="0">
+						<input class="range_value_icon border_value" id="border_value_r" value="0">
+
+						<label class="label label_b">Bottom</label>
+						<input class="range_icon" type="range" id="border_range_b" name="border" min="0" max="100" value="0">
+						<input class="range_value_icon border_value" id="border_value_b" value="0">
+
+						<label class="label label_l">Left</label>
+						<input class="range_icon" type="range" id="border_range_l" name="border" min="0" max="100" value="0">
+						<input class="range_value_icon border_value" id="border_value_l" value="0">
+					</div>
+				</div>
+
+				<div class="tool_bar_btn" id="font_size">
+					<button class="tool_icon" id="font_size_btn">Font Size</button>
+					<select class="toggle_icon" id="font_size_display">
+					</select>
+				</div>
+				<div class="tool_bar_btn" id="layer">
+					<button class="tool_icon" id="layer_btn">Layer</button>
+					<div class="toggle_icon" id="layer_display">
+						<button class="tool_icon" id="send_to_back">Send to Back</button>
+						<button class="tool_icon" id="bring_to_font">Bring to Font</button>
+					</div>
+				</div>
+
 			</div>
 		</div>
 		<div class="row">
 			<div id="tool_box">
 				<div class="tool" id="shape_tool">
-					<button class="tool_btn" id="rec">Rectangle</button>
+					<button class="tool_btn" id="rec">Shape</button>
 					<button class="tool_btn" id="txt">Text Box</button>
 				</div>
 			</div>
-			<div id="main_canvas">
-				<div id="canvas">
-					<div class="handle handle_remove" id="handle_nw"></div>
-					<div class="handle handle_remove" id="handle_n"></div>
-					<div class="handle handle_remove" id="handle_ne"></div>
-					<div class="handle handle_remove" id="handle_e"></div>
-					<div class="handle handle_remove" id="handle_se"></div>
-					<div class="handle handle_remove" id="handle_s"></div>
-					<div class="handle handle_remove" id="handle_sw"></div>
-					<div class="handle handle_remove" id="handle_w"></div>
-				</div>
+			<div id="canvas">
+				<div class="handle handle_remove" id="handle_nw"></div>
+				<div class="handle handle_remove" id="handle_n"></div>
+				<div class="handle handle_remove" id="handle_ne"></div>
+				<div class="handle handle_remove" id="handle_e"></div>
+				<div class="handle handle_remove" id="handle_se"></div>
+				<div class="handle handle_remove" id="handle_s"></div>
+				<div class="handle handle_remove" id="handle_sw"></div>
+				<div class="handle handle_remove" id="handle_w"></div>
 			</div>
 		</div>
 	</div>
